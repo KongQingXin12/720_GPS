@@ -20,10 +20,27 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_openfile_clicked()
 {
-	//对打开文件进行操作
+    filename = QFileDialog::getOpenFileName(this, QString::fromLocal8Bit("文件"), "", tr("text(*.txt)"));
+    ui->dis_mainwindow->append(QString::fromLocal8Bit("源文件路径：")+filename);
+    /*
+    filename=input;
+     InputDialog *input=new InputDialog();
+        //关联信号和函数
+        connect(input,SIGNAL(input_to_mainwindow(QString)),this,SLOT(receDatafrom_inputdialog(QString)));
+
+
+    filename=input->in_filename;
+    source=filename.toStdString();
+    QString temp=input->gps_pos_dir;
+    ui->dis_mainwindow->append(temp);
+    gps_pos=temp.toStdString();
+    temp=input->result_dir;
+    ui->dis_mainwindow->append(temp);
+    gps=temp.toStdString();
 
     filename=QFileDialog::getOpenFileName(this, QString::fromLocal8Bit("文件"), "", tr("text(*.txt)"));
     ui->dis_mainwindow->append(filename);
+    */
 }
 
 void MainWindow::on_deletefile_clicked()

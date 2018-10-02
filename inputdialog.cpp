@@ -19,6 +19,7 @@ void InputDialog::on_source_clicked()
 {
     in_filename = QFileDialog::getOpenFileName(this, QString::fromLocal8Bit("文件"), "", tr("text(*.txt)"));
     ui->textBrowser->append(QString::fromLocal8Bit("源文件路径：")+in_filename);
+    //emit input_to_mainwindow(in_filename);
 	//to_mainwindow(in_filename);
 }
 

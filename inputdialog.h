@@ -22,7 +22,7 @@ public:
     QString gps_pos_dir;
     QString mode_dir;
 signals:
-	void to_mainwindow(QString s);
+    void input_to_mainwindow(QString);
 private slots:
     void on_source_clicked();
     void on_gps_pos_clicked();

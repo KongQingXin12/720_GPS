@@ -33,6 +33,8 @@ private slots:
     void on_display_clicked();
 
     void on_inputfilepath_clicked();
+
+    //void receDatafrom_inputdialog(QString data);
 private:
     Ui::MainWindow *ui;
     Dialog *dialog;//窗口1
@@ -40,6 +42,8 @@ private:
     QString filename;//文件名
     vector<string> dir;//处理数组输出
     QString resultFilename;//输出文件路径
+
+
 
 	string source;
 	string gps_pos;
