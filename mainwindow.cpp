@@ -65,6 +65,10 @@ void MainWindow::on_deal_with_clicked()
     s.trans();
     GPStxt_834 s1(gps_pos, gps, gps_xml);
     dir = s1.deal_pos();
+    if(dir.size()!=0)
+        ui->dis_mainwindow->append(QString::fromLocal8Bit("处理完成"));
+    else
+        ui->dis_mainwindow->append(QString::fromLocal8Bit("处理失败"));
 
 }
 
