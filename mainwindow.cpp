@@ -80,7 +80,7 @@ void MainWindow::on_deal_with_clicked()
     //对打开文件进行处理
     readtxt s(source,gps_pos);
     s.trans();
-    GPStxt_834 s1(gps_pos, gps, gps_xml);
+    GPStxt_834 s1(gps_pos, gps);
     dir = s1.deal_pos();
     if(dir.size()!=0)
         ui->dis_mainwindow->append(QString::fromLocal8Bit("处理完成"));

@@ -5,11 +5,11 @@ class GPStxt_834 :public readtxt
 private:
 	string pos;
 	string gps;
-	string mode;
+    //string mode;
 	vector<string>ans;
 public:
 	GPStxt_834();
-	GPStxt_834(string r, string w, string m);
+    GPStxt_834(string r, string w);
 	vector<string> deal_pos();
 	void deal_read_mode(string gps_name);
 	void deal_vec();
