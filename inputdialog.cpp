@@ -24,20 +24,20 @@ void InputDialog::on_source_clicked()
 
 void InputDialog::on_gps_pos_clicked()
 {
-
+         gps_pos_dir = QFileDialog::getExistingDirectory(this, QString::fromLocal8Bit("保存GPStemp"), "/home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+         ui->textBrowser->append(QString::fromLocal8Bit("保存GPStemp路径：")+gps_pos_dir);
 }
 
 void InputDialog::on_gps_xml_clicked()
 {
-
+    mode_dir = QFileDialog::getExistingDirectory(this, QString::fromLocal8Bit("保存GPStemp"), "/home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+    ui->textBrowser->append(QString::fromLocal8Bit("保存GPStemp路径：")+mode_dir);
 }
 
 void InputDialog::on_gps_2_clicked()
 {
-
+    result_dir = QFileDialog::getExistingDirectory(this, QString::fromLocal8Bit("保存result"), "/home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+    ui->textBrowser->append(QString::fromLocal8Bit("result路径：")+result_dir);
 }
 
-//void InputDialog::to_mainwindow(QString s)
-//{
-//	emit to_mainwindow(s);
-//}
+
